@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace Domain.Entities
+namespace Application.Author.Dto
 {
-  public interface IPerson
+  public class AuthorDto
   {
+    public Guid Id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public DateTime BirthDate { get; set; }
-    public int Age { get; }
+    public int Age { get; set; }
   }
 }

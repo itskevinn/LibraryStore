@@ -8,7 +8,7 @@ namespace Domain.Entities
   {
     public string Name { get; set; }
     public string Description { get; set; }
-    public double Price { get; set; } 
+    public double Price { get; set; }
     [JsonIgnore] public Author Author { get; set; }
     [JsonIgnore] public Publisher Publisher { get; set; }
     [JsonIgnore] public Genre Genre { get; set; }

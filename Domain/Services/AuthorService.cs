@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.Entities;
-using Domain.Exceptions;
 using Domain.Repository;
-using Domain.Services.Base.Base;
+using Domain.Services.Base;
 
 namespace Domain.Services
 {
@@ -18,42 +17,6 @@ namespace Domain.Services
       _authorRepository = authorRepository ??
                           throw new ArgumentNullException(nameof(authorRepository),
                             $"{nameof(authorRepository)} is unavailable");
-    }
-
-    public async Task<Author> Create(Author author)
-    {
-      try
-      {
-        return await _authorRepository.CreateAsync(author);
-      }
-      catch (Exception e)
-      {
-        throw new AppException("Oops! Something went wrong", e);
-      }
-    }
-
-    public async Task UpdateAsync(Author author)
-    {
-      try
-      {
-        await _authorRepository.UpdateAsync(author);
-      }
-      catch (Exception e)
-      {
-        throw new AppException("Oops! Something went wrong", e);
-      }
-    }
-
-    public async Task DeleteAsync(Author author)
-    {
-      try
-      {
-        await _authorRepository.DeleteAsync(author);
-      }
-      catch (Exception e)
-      {
-        throw new AppException("Oops! Something went wrong", e);
-      }
     }
 
     public async Task<IEnumerable<Author>> GetAsync()
