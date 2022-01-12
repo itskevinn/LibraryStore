@@ -1,0 +1,136 @@
+2022-01-11 11:39:48.139 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-11 11:39:48.216 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-11 11:39:48.225 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-11 11:39:48.226 -05:00 [INF] Hosting environment: Development
+2022-01-11 11:39:48.227 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-11 11:39:48.606 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-11 11:39:48.844 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 240.4867ms
+2022-01-11 11:39:49.252 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-11 11:39:49.424 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 171.7310ms
+2022-01-11 11:40:03.971 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-11 11:40:04.012 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: */*
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 11:40:04.022 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 11:40:04.049 -05:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task Get() on controller Api.Controllers.BookController (Api).
+2022-01-11 11:40:05.581 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=_MigrationHistory 
+2022-01-11 11:40:06.395 -05:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CreatedBy], [b].[CreatedOn], [b].[Description], [b].[GenreId], [b].[LastModifiedOn], [b].[Name], [b].[Price], [b].[PublisherId], [b].[State], [b].[UpdatedBy]
+FROM [Book] AS [b]
+2022-01-11 11:40:06.505 -05:00 [INF] Executed action Api.Controllers.BookController.Get (Api) in 2445.6087ms
+2022-01-11 11:40:06.508 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 11:40:06.513 -05:00 [INF] Response:
+StatusCode: 200
+2022-01-11 11:40:06.529 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 200 0 - 2557.7866ms
+2022-01-11 11:41:10.229 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Book application/json 448
+2022-01-11 11:41:10.231 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Book
+Accept: */*
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 448
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 11:41:10.233 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 11:41:10.255 -05:00 [INF] Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task Post(Application.Book.Request.BookRequest) on controller Api.Controllers.BookController (Api).
+2022-01-11 11:41:10.378 -05:00 [INF] Executed action Api.Controllers.BookController.Post (Api) in 121.0881ms
+2022-01-11 11:41:10.379 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 11:41:10.381 -05:00 [INF] Response:
+StatusCode: 200
+2022-01-11 11:41:10.384 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Book application/json 448 - 200 0 - 155.1274ms
+2022-01-11 11:41:24.779 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-11 11:41:24.783 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: */*
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 11:41:24.785 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 11:41:24.786 -05:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task Get() on controller Api.Controllers.BookController (Api).
+2022-01-11 11:41:24.834 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=_MigrationHistory 
+2022-01-11 11:41:24.847 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CreatedBy], [b].[CreatedOn], [b].[Description], [b].[GenreId], [b].[LastModifiedOn], [b].[Name], [b].[Price], [b].[PublisherId], [b].[State], [b].[UpdatedBy]
+FROM [Book] AS [b]
+2022-01-11 11:41:24.852 -05:00 [INF] Executed action Api.Controllers.BookController.Get (Api) in 64.1793ms
+2022-01-11 11:41:24.853 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 11:41:24.855 -05:00 [INF] Response:
+StatusCode: 200
+2022-01-11 11:41:24.858 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 200 0 - 78.8021ms
+2022-01-11 11:41:27.244 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-11 11:41:27.245 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: */*
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 11:41:27.247 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 11:41:27.248 -05:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task Get() on controller Api.Controllers.BookController (Api).
+2022-01-11 11:41:27.265 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=_MigrationHistory 
+2022-01-11 11:41:27.271 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CreatedBy], [b].[CreatedOn], [b].[Description], [b].[GenreId], [b].[LastModifiedOn], [b].[Name], [b].[Price], [b].[PublisherId], [b].[State], [b].[UpdatedBy]
+FROM [Book] AS [b]
+2022-01-11 11:41:27.274 -05:00 [INF] Executed action Api.Controllers.BookController.Get (Api) in 21.8669ms
+2022-01-11 11:41:27.275 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 11:41:27.277 -05:00 [INF] Response:
+StatusCode: 200
+2022-01-11 11:41:27.278 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 200 0 - 34.1892ms

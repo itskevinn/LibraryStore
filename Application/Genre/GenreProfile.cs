@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Application.Genre.Dto;
+using AutoMapper;
 
 namespace Application.Genre
 {
@@ -6,6 +7,7 @@ namespace Application.Genre
   {
     public GenreProfile()
     {
+      CreateMap<Domain.Entities.Genre, GenreDto>().ReverseMap();
     }
   }
 }

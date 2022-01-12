@@ -24,7 +24,7 @@ namespace Domain.Services
 
     public async Task<Genre> GetByIdAsync(Guid id)
     {
-      return await _genreRepository.GetByIdAsync(id);
+      return await _genreRepository.FindAsync(id);
     }
   }
 }

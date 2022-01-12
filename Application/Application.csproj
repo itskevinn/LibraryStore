@@ -7,16 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Author\Request" />
-      <Folder Include="Author\Service" />
-      <Folder Include="Genre\Request" />
-      <Folder Include="Genre\Service" />
-      <Folder Include="Publisher\Request" />
-      <Folder Include="Publisher\Service" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="AutoMapper" Version="11.0.0" />
+      <PackageReference Include="Dapper" Version="2.0.123" />
+      <PackageReference Include="MediatR" Version="10.0.1" />
+      <PackageReference Include="MediatR.Contracts" Version="1.0.1" />
     </ItemGroup>
 
     <ItemGroup>

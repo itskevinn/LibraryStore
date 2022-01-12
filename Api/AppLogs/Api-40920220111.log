@@ -1,0 +1,70 @@
+2022-01-11 12:43:00.202 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-11 12:43:00.285 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-11 12:43:00.294 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-11 12:43:00.297 -05:00 [INF] Hosting environment: Development
+2022-01-11 12:43:00.301 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-11 12:43:00.727 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-11 12:43:00.937 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 211.3556ms
+2022-01-11 12:43:01.297 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-11 12:43:01.440 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 144.1240ms
+2022-01-11 12:43:08.648 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Book application/json 502
+2022-01-11 12:43:08.676 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Book
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 502
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 12:43:08.682 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 12:43:08.712 -05:00 [INF] Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[Application.Book.Dto.BookDto]]] Post(Application.Book.Request.BookRequest) on controller Api.Controllers.BookController (Api).
+2022-01-11 12:43:09.175 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-11 12:43:09.184 -05:00 [INF] Executed action Api.Controllers.BookController.Post (Api) in 465.6451ms
+2022-01-11 12:43:09.187 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 12:43:09.197 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 11 Jan 2022 17:43:09 GMT
+Server: Kestrel
+2022-01-11 12:43:09.201 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Book application/json 502 - 200 - application/json;+charset=utf-8 553.3699ms
+2022-01-11 12:43:25.428 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Book application/json 502
+2022-01-11 12:43:25.430 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Book
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 502
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 12:43:25.432 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 12:43:25.433 -05:00 [INF] Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[Application.Book.Dto.BookDto]]] Post(Application.Book.Request.BookRequest) on controller Api.Controllers.BookController (Api).

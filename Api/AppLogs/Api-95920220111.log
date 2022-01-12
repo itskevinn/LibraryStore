@@ -1,0 +1,244 @@
+2022-01-11 13:59:53.424 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-11 13:59:53.510 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-11 13:59:53.524 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-11 13:59:53.530 -05:00 [INF] Hosting environment: Development
+2022-01-11 13:59:53.533 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-11 13:59:54.080 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-11 13:59:54.242 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 169.7706ms
+2022-01-11 13:59:54.625 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-11 13:59:54.782 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.9258ms
+2022-01-11 14:00:04.402 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-11 14:00:04.437 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 14:00:04.446 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 14:00:04.474 -05:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[System.Collections.Generic.IEnumerable`1[Application.Book.Dto.BookDto]]]] Get() on controller Api.Controllers.BookController (Api).
+2022-01-11 14:00:06.043 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=_MigrationHistory 
+2022-01-11 14:00:06.821 -05:00 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CreatedBy], [b].[CreatedOn], [b].[Description], [b].[GenreId], [b].[LastModifiedOn], [b].[Name], [b].[Price], [b].[PublisherId], [b].[State], [b].[UpdatedBy]
+FROM [Book] AS [b]
+2022-01-11 14:00:06.922 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[System.Collections.Generic.IEnumerable`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-01-11 14:00:06.942 -05:00 [INF] Executed action Api.Controllers.BookController.Get (Api) in 2450.9381ms
+2022-01-11 14:00:06.946 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 14:00:06.950 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 11 Jan 2022 19:00:06 GMT
+Server: Kestrel
+2022-01-11 14:00:06.967 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 200 - application/json;+charset=utf-8 2564.8827ms
+2022-01-11 15:06:18.618 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-11 15:06:18.687 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-11 15:06:18.694 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-11 15:06:18.697 -05:00 [INF] Hosting environment: Development
+2022-01-11 15:06:18.699 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-11 15:06:19.300 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-11 15:06:19.455 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 158.0505ms
+2022-01-11 15:06:19.772 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-11 15:06:19.906 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 134.1254ms
+2022-01-11 15:06:29.733 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-11 15:06:29.769 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 15:06:29.776 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 15:06:29.795 -05:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[System.Collections.Generic.List`1[Application.Book.Dto.BookDto]]]] Get() on controller Api.Controllers.BookController (Api).
+2022-01-11 15:06:58.048 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=_MigrationHistory 
+2022-01-11 15:07:52.382 -05:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CreatedBy], [b].[CreatedOn], [b].[Description], [b].[GenreId], [b].[LastModifiedOn], [b].[Name], [b].[Price], [b].[PublisherId], [b].[State], [b].[UpdatedBy]
+FROM [Book] AS [b]
+2022-01-11 15:07:52.510 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Infrastructure.Repository.PersistenceContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method54(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method54(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2022-01-11 15:09:45.007 -05:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CreatedBy], [b].[CreatedOn], [b].[Description], [b].[GenreId], [b].[LastModifiedOn], [b].[Name], [b].[Price], [b].[PublisherId], [b].[State], [b].[UpdatedBy], [p].[Id], [p].[CreatedBy], [p].[CreatedOn], [p].[LastModifiedOn], [p].[Name], [p].[State], [p].[UpdatedBy], [a].[Id], [a].[BirthDate], [a].[CreatedBy], [a].[CreatedOn], [a].[FirstName], [a].[LastModifiedOn], [a].[LastName], [a].[State], [a].[UpdatedBy], [g].[Id], [g].[CreatedBy], [g].[CreatedOn], [g].[Description], [g].[LastModifiedOn], [g].[Name], [g].[State], [g].[UpdatedBy]
+FROM [Book] AS [b]
+INNER JOIN [Publisher] AS [p] ON [b].[PublisherId] = [p].[Id]
+INNER JOIN [Author] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Genre] AS [g] ON [b].[GenreId] = [g].[Id]
+2022-01-11 15:09:45.201 -05:00 [ERR] Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Domain.Entities.Book, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Domain.Entities.Book, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Book -> BookDto
+Domain.Entities.Book -> Application.Book.Dto.BookDto
+
+Type Map configuration:
+Book -> BookDto
+Domain.Entities.Book -> Application.Book.Dto.BookDto
+
+Destination Member:
+Publisher
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Publisher -> PublisherDto
+Domain.Entities.Publisher -> Application.Publisher.Dto.PublisherDto
+
+Destination Member:
+Publisher
+
+   at lambda_method113(Closure , Publisher , PublisherDto , ResolutionContext )
+   at lambda_method112(Closure , IEnumerable`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method112(Closure , IEnumerable`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method112(Closure , IEnumerable`1 , IEnumerable`1 , ResolutionContext )
+   at Application.Book.Service.BookService.GetAsync() in C:\Users\kevin\RiderProjects\LibraryStore\Application\Book\Service\BookService.cs:line 98
+   at Api.Controllers.BookController.Get() in C:\Users\kevin\RiderProjects\LibraryStore\Api\Controllers\BookController.cs:line 33
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2022-01-11 15:09:45.242 -05:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-01-11 15:09:45.257 -05:00 [INF] Executed action Api.Controllers.BookController.Get (Api) in 195452.6601ms
+2022-01-11 15:09:45.260 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 15:09:45.262 -05:00 [INF] Response:
+StatusCode: 500
+Content-Type: application/json; charset=utf-8
+Date: Tue, 11 Jan 2022 20:09:44 GMT
+Server: Kestrel
+2022-01-11 15:09:45.271 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 500 - application/json;+charset=utf-8 195538.7100ms
+2022-01-11 15:10:14.573 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-11 15:10:14.577 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 15:10:14.578 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 15:10:14.580 -05:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[System.Collections.Generic.List`1[Application.Book.Dto.BookDto]]]] Get() on controller Api.Controllers.BookController (Api).
+2022-01-11 15:10:21.127 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=_MigrationHistory 
+2022-01-11 15:10:21.872 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CreatedBy], [b].[CreatedOn], [b].[Description], [b].[GenreId], [b].[LastModifiedOn], [b].[Name], [b].[Price], [b].[PublisherId], [b].[State], [b].[UpdatedBy], [p].[Id], [p].[CreatedBy], [p].[CreatedOn], [p].[LastModifiedOn], [p].[Name], [p].[State], [p].[UpdatedBy], [a].[Id], [a].[BirthDate], [a].[CreatedBy], [a].[CreatedOn], [a].[FirstName], [a].[LastModifiedOn], [a].[LastName], [a].[State], [a].[UpdatedBy], [g].[Id], [g].[CreatedBy], [g].[CreatedOn], [g].[Description], [g].[LastModifiedOn], [g].[Name], [g].[State], [g].[UpdatedBy]
+FROM [Book] AS [b]
+INNER JOIN [Publisher] AS [p] ON [b].[PublisherId] = [p].[Id]
+INNER JOIN [Author] AS [a] ON [b].[AuthorId] = [a].[Id]
+INNER JOIN [Genre] AS [g] ON [b].[GenreId] = [g].[Id]
+2022-01-11 15:10:21.978 -05:00 [ERR] Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Domain.Entities.Book, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Domain.Entities.Book, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Book -> BookDto
+Domain.Entities.Book -> Application.Book.Dto.BookDto
+
+Type Map configuration:
+Book -> BookDto
+Domain.Entities.Book -> Application.Book.Dto.BookDto
+
+Destination Member:
+Publisher
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Publisher -> PublisherDto
+Domain.Entities.Publisher -> Application.Publisher.Dto.PublisherDto
+
+Destination Member:
+Publisher
+
+   at lambda_method113(Closure , Publisher , PublisherDto , ResolutionContext )
+   at lambda_method112(Closure , IEnumerable`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method112(Closure , IEnumerable`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method112(Closure , IEnumerable`1 , IEnumerable`1 , ResolutionContext )
+   at Application.Book.Service.BookService.GetAsync() in C:\Users\kevin\RiderProjects\LibraryStore\Application\Book\Service\BookService.cs:line 98
+   at Api.Controllers.BookController.Get() in C:\Users\kevin\RiderProjects\LibraryStore\Api\Controllers\BookController.cs:line 33
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2022-01-11 15:10:22.002 -05:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-01-11 15:10:22.004 -05:00 [INF] Executed action Api.Controllers.BookController.Get (Api) in 7421.9398ms
+2022-01-11 15:10:22.005 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 15:10:22.009 -05:00 [INF] Response:
+StatusCode: 500
+Content-Type: application/json; charset=utf-8
+Date: Tue, 11 Jan 2022 20:10:21 GMT
+Server: Kestrel
+2022-01-11 15:10:22.010 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 500 - application/json;+charset=utf-8 7437.1061ms

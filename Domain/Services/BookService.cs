@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Exceptions;
@@ -20,17 +22,20 @@ namespace Domain.Services
                           $"{nameof(bookRepository)} is unavailable");
     }
 
-    public async Task<IEnumerable<Book>> GetAsync()
+    public async Task<IEnumerable<Book>> GetAsync(Expression<Func<Book, bool>>? filter = null,
+      Func<IQueryable<Book>, IOrderedQueryable<Book>>? orderBy = null,
+      bool isTracking = false,
+      string includeStringProperties = "")
     {
-      return await _bookRepository.GetAsync();
+      return await _bookRepository.GetAsync(filter, orderBy, isTracking, includeStringProperties);
     }
 
-    public async Task<Book> GetByIdAsync(Guid id)
+    public async Task<Book> FindAsync(Guid id)
     {
-      return await _bookRepository.GetByIdAsync(id);
+      return await _bookRepository.FindAsync(id);
     }
 
-    public async Task<Book> Create(Book book)
+    public async Task<Book> CreateAsync(Book book)
     {
       try
       {
@@ -46,12 +51,18 @@ namespace Domain.Services
     {
       try
       {
+        _bookRepository.ClearTracking();
         await _bookRepository.UpdateAsync(book);
       }
       catch (Exception e)
       {
         throw new AppException("Oops! Something went wrong", e);
       }
+    }
+
+    public async Task<bool> ExistsAsync(Guid id)
+    {
+      return await _bookRepository.ExistsAsync(id);
     }
 
     public async Task DeleteAsync(Book book)

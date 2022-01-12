@@ -1,0 +1,115 @@
+2022-01-11 11:55:40.366 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-11 11:55:40.450 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-11 11:55:40.460 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-11 11:55:40.461 -05:00 [INF] Hosting environment: Development
+2022-01-11 11:55:40.462 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-11 11:55:40.691 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-11 11:55:40.874 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 187.0500ms
+2022-01-11 11:55:41.179 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-11 11:55:41.327 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 148.7455ms
+2022-01-11 11:56:22.499 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-11 11:56:22.537 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 11:56:22.548 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 11:56:22.571 -05:00 [INF] Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Application.Utilities.Response`1[System.Collections.Generic.IEnumerable`1[Application.Book.Dto.BookDto]]] Get() on controller Api.Controllers.BookController (Api).
+2022-01-11 11:56:24.011 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=_MigrationHistory 
+2022-01-11 11:56:24.824 -05:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CreatedBy], [b].[CreatedOn], [b].[Description], [b].[GenreId], [b].[LastModifiedOn], [b].[Name], [b].[Price], [b].[PublisherId], [b].[State], [b].[UpdatedBy]
+FROM [Book] AS [b]
+2022-01-11 11:56:24.924 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[System.Collections.Generic.IEnumerable`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-01-11 11:56:24.946 -05:00 [INF] Executed action Api.Controllers.BookController.Get (Api) in 2360.9025ms
+2022-01-11 11:56:24.950 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Get (Api)'
+2022-01-11 11:56:24.956 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 11 Jan 2022 16:56:24 GMT
+Server: Kestrel
+2022-01-11 11:56:24.977 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 200 - application/json;+charset=utf-8 2478.6590ms
+2022-01-11 11:57:43.960 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Book application/json 480
+2022-01-11 11:57:43.963 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Book
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 480
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 11:57:43.965 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 11:57:43.985 -05:00 [INF] Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Application.Utilities.Response`1[Application.Book.Dto.BookDto]] Post(Application.Book.Request.BookRequest) on controller Api.Controllers.BookController (Api).
+2022-01-11 11:57:44.066 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-11 11:57:44.068 -05:00 [INF] Executed action Api.Controllers.BookController.Post (Api) in 81.6572ms
+2022-01-11 11:57:44.069 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 11:57:44.071 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 11 Jan 2022 16:57:43 GMT
+Server: Kestrel
+2022-01-11 11:57:44.072 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Book application/json 480 - 200 - application/json;+charset=utf-8 112.1892ms
+2022-01-11 11:57:48.921 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Book application/json 480
+2022-01-11 11:57:48.922 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Book
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 480
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-11 11:57:48.924 -05:00 [INF] Executing endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 11:57:48.926 -05:00 [INF] Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Application.Utilities.Response`1[Application.Book.Dto.BookDto]] Post(Application.Book.Request.BookRequest) on controller Api.Controllers.BookController (Api).
+2022-01-11 11:57:48.932 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[Application.Book.Dto.BookDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-11 11:57:48.936 -05:00 [INF] Executed action Api.Controllers.BookController.Post (Api) in 8.6259ms
+2022-01-11 11:57:48.937 -05:00 [INF] Executed endpoint 'Api.Controllers.BookController.Post (Api)'
+2022-01-11 11:57:48.941 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 11 Jan 2022 16:57:48 GMT
+Server: Kestrel
+2022-01-11 11:57:48.943 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Book application/json 480 - 200 - application/json;+charset=utf-8 22.3276ms

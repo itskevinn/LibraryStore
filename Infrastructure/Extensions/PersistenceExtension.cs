@@ -12,7 +12,7 @@ namespace Infrastructure.Extensions
     public static IServiceCollection AddPersistence(this IServiceCollection svc, IConfiguration config)
     {
       svc.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-      svc.AddTransient<IDbConnection>((_) => new SqlConnection(config.GetConnectionString("Library")));
+      svc.AddTransient<IDbConnection>((_) => new SqlConnection(config.GetConnectionString("database")));
       return svc;
     }
   }

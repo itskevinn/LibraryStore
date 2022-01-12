@@ -8,20 +8,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository
 {
-  public sealed class GenericRepository<E> : IGenericRepository<E> where E : Domain.Entities.Base.DomainEntity, IDisposable
+  public sealed class GenericRepository<T> : IGenericRepository<T> where T : Domain.Entities.Base.DomainEntity
   {
     private readonly PersistenceContext _context;
 
     public GenericRepository(PersistenceContext context)
     {
-      _context = context;
+      _context = context ?? throw new ArgumentNullException(nameof(context), $"{nameof(context)} is unavailable");
     }
 
-    public async Task<IEnumerable<E>> GetAsync(Expression<Func<E, bool>>? filter = null,
-      Func<IQueryable<E>, IOrderedQueryable<E>>? orderBy = null, bool isTracking = false,
+    public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>>? filter = null,
+      Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, bool isTracking = false,
       string includeStringProperties = "")
     {
-      IQueryable<E> query = _context.Set<E>();
+      IQueryable<T> query = _context.Set<T>();
 
       if (filter != null)
       {
@@ -42,34 +42,39 @@ namespace Infrastructure.Repository
       return (!isTracking) ? await query.AsNoTracking().ToListAsync() : await query.ToListAsync();
     }
 
-    public async Task<E> GetByIdAsync(object id)
+    public async Task<T> FindAsync(object id)
     {
-      return await _context.Set<E>().FindAsync(id);
+      return await _context.Set<T>().FindAsync(id);
     }
 
     public async Task<bool> ExistsAsync(object id)
     {
-      return await _context.Set<E>().FindAsync(id) != null;
+      return await _context.Set<T>().FindAsync(id) != null;
     }
 
-    public async Task<E> CreateAsync(E entity)
+    public async Task<T> CreateAsync(T entity)
     {
       _ = entity ?? throw new ArgumentNullException(nameof(entity), $"{nameof(entity)} can not be null");
-      _context.Set<E>().Add(entity);
+      _context.Set<T>().Add(entity);
       await CommitAsync();
       return entity;
     }
 
-    public async Task UpdateAsync(E entity)
+    public async Task UpdateAsync(T entity)
     {
-      _context.Set<E>().Update(entity);
+      _context.Set<T>().Update(entity);
       await CommitAsync();
     }
 
-    public async Task DeleteAsync(E entity)
+    public async Task DeleteAsync(T entity)
     {
-      _context.Set<E>().Remove(entity);
+      _context.Set<T>().Remove(entity);
       await CommitAsync().ConfigureAwait(false);
+    }
+
+    public void ClearTracking()
+    {
+      _context.ChangeTracker.Clear();
     }
 
     private async Task CommitAsync()
@@ -90,17 +95,6 @@ namespace Infrastructure.Repository
       }
 
       await _context.CommitAsync().ConfigureAwait(false);
-    }
-
-    public void Dispose()
-    {
-      Dispose(true);
-      GC.SuppressFinalize(this);
-    }
-
-    private void Dispose(bool disposing)
-    {
-      this._context.Dispose();
     }
   }
 }

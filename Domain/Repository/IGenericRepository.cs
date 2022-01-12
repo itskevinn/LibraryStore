@@ -7,18 +7,20 @@ using Domain.Entities.Base;
 
 namespace Domain.Repository
 {
-  public interface IGenericRepository<TE> where TE : DomainEntity
+  public interface IGenericRepository<T> where T : DomainEntity
   {
-    Task<TE> CreateAsync(TE entity);
-    Task UpdateAsync(TE entity);
-    Task DeleteAsync(TE entity);
-    Task<TE> GetByIdAsync(object id);
+    Task<T> CreateAsync(T entity);
+    Task UpdateAsync(T entity);
+    Task DeleteAsync(T entity);
+    Task<T> FindAsync(object id);
     Task<bool> ExistsAsync(object id);
 
-    Task<IEnumerable<TE>> GetAsync(
-      Expression<Func<TE, bool>>? filter = null,
-      Func<IQueryable<TE>, IOrderedQueryable<TE>>? orderBy = null,
+    Task<IEnumerable<T>> GetAsync(
+      Expression<Func<T, bool>>? filter = null,
+      Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
       bool isTracking = false,
       string includeStringProperties = "");
+
+    void ClearTracking();
   }
 }

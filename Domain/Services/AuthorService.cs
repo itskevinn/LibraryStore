@@ -26,7 +26,7 @@ namespace Domain.Services
 
     public async Task<Author> GetByIdAsync(Guid id)
     {
-      return await _authorRepository.GetByIdAsync(id);
+      return await _authorRepository.FindAsync(id);
     }
   }
 }

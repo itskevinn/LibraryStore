@@ -1,0 +1,9 @@
+2022-01-11 13:01:52.822 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-11 13:01:52.894 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-11 13:01:52.904 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-11 13:01:52.905 -05:00 [INF] Hosting environment: Development
+2022-01-11 13:01:52.906 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-11 13:01:53.468 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-11 13:01:53.638 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 173.8281ms
+2022-01-11 13:01:54.000 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-11 13:01:54.170 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.0475ms

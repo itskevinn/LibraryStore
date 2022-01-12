@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Application.Publisher.Dto;
+using AutoMapper;
 
 namespace Application.Publisher
 {
@@ -6,6 +7,8 @@ namespace Application.Publisher
   {
     public PublisherProfile()
     {
+      CreateMap<Domain.Entities.Publisher, PublisherDto>().ReverseMap();
+
     }
   }
 }
