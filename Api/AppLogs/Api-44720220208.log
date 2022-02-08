@@ -1,0 +1,117 @@
+2022-02-08 01:30:39.817 -05:00 [INF] User profile is available. Using 'C:\Users\kevin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-08 01:30:40.104 -05:00 [INF] Now listening on: https://localhost:7150
+2022-02-08 01:30:40.107 -05:00 [INF] Now listening on: http://localhost:5150
+2022-02-08 01:30:40.111 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-08 01:30:40.113 -05:00 [INF] Hosting environment: Development
+2022-02-08 01:30:40.115 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-02-08 01:30:45.075 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-02-08 01:30:45.167 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 94.3735ms
+2022-02-08 01:30:45.431 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-02-08 01:30:45.568 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.6697ms
+2022-02-08 01:33:16.977 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/MenuItem application/json 128
+2022-02-08 01:33:17.013 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/MenuItem
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 128
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-02-08 01:33:17.430 -05:00 [INF] Executing endpoint 'Api.Controllers.MenuItemController.Post (Api)'
+2022-02-08 01:33:17.464 -05:00 [INF] Route matched with {action = "Post", controller = "MenuItem"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[Application.Config.MenuItem.Dto.MenuItemDto]]] Post(Application.Config.MenuItem.Commands.MenuItemCreateCommand) on controller Api.Controllers.MenuItemController (Api).
+2022-02-08 01:33:17.542 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-02-08 01:33:17.550 -05:00 [INF] Executed action Api.Controllers.MenuItemController.Post (Api) in 80.914ms
+2022-02-08 01:33:17.552 -05:00 [INF] Executed endpoint 'Api.Controllers.MenuItemController.Post (Api)'
+2022-02-08 01:33:17.553 -05:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+Date: Tue, 08 Feb 2022 06:33:17 GMT
+Server: Kestrel
+2022-02-08 01:33:17.553 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/MenuItem application/json 128 - 400 - application/problem+json;+charset=utf-8 577.0020ms
+2022-02-08 01:33:41.322 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/MenuItem application/json 129
+2022-02-08 01:33:41.331 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/MenuItem
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 129
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-02-08 01:33:41.332 -05:00 [INF] Executing endpoint 'Api.Controllers.MenuItemController.Post (Api)'
+2022-02-08 01:33:41.333 -05:00 [INF] Route matched with {action = "Post", controller = "MenuItem"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[Application.Config.MenuItem.Dto.MenuItemDto]]] Post(Application.Config.MenuItem.Commands.MenuItemCreateCommand) on controller Api.Controllers.MenuItemController (Api).
+2022-02-08 01:33:42.692 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=Library._MigrationHistory 
+2022-02-08 01:33:42.901 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[Application.Config.MenuItem.Dto.MenuItemDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-08 01:33:42.905 -05:00 [INF] Executed action Api.Controllers.MenuItemController.Post (Api) in 1571.7632ms
+2022-02-08 01:33:42.905 -05:00 [INF] Executed endpoint 'Api.Controllers.MenuItemController.Post (Api)'
+2022-02-08 01:33:42.905 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 08 Feb 2022 06:33:42 GMT
+Server: Kestrel
+2022-02-08 01:33:42.911 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/MenuItem application/json 129 - 200 - application/json;+charset=utf-8 1589.3623ms
+2022-02-08 01:34:23.424 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/MenuItem application/json 129
+2022-02-08 01:34:23.427 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/MenuItem
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36 Edg/98.0.1108.43
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 129
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-02-08 01:34:23.436 -05:00 [INF] Executing endpoint 'Api.Controllers.MenuItemController.Post (Api)'
+2022-02-08 01:34:23.436 -05:00 [INF] Route matched with {action = "Post", controller = "MenuItem"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[Application.Config.MenuItem.Dto.MenuItemDto]]] Post(Application.Config.MenuItem.Commands.MenuItemCreateCommand) on controller Api.Controllers.MenuItemController (Api).
+2022-02-08 01:34:23.480 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=Library._MigrationHistory 
+2022-02-08 01:34:23.655 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[Application.Config.MenuItem.Dto.MenuItemDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-08 01:34:23.655 -05:00 [INF] Executed action Api.Controllers.MenuItemController.Post (Api) in 218.6732ms
+2022-02-08 01:34:23.656 -05:00 [INF] Executed endpoint 'Api.Controllers.MenuItemController.Post (Api)'
+2022-02-08 01:34:23.656 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 08 Feb 2022 06:34:22 GMT
+Server: Kestrel
+2022-02-08 01:34:23.656 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/MenuItem application/json 129 - 200 - application/json;+charset=utf-8 232.4929ms

@@ -1,0 +1,333 @@
+2022-01-22 00:41:32.781 -05:00 [INF] User profile is available. Using 'C:\Users\kevin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-01-22 00:41:33.077 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-22 00:41:33.078 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-22 00:41:33.082 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-22 00:41:33.083 -05:00 [INF] Hosting environment: Development
+2022-01-22 00:41:33.084 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-22 00:41:33.856 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-22 00:41:34.069 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 217.8309ms
+2022-01-22 00:41:34.478 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-22 00:41:34.782 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 303.7589ms
+2022-01-22 00:41:37.921 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Auth application/json 48
+2022-01-22 00:41:37.964 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 48
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:38.201 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-01-22 00:41:38.238 -05:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2022-01-22 00:41:38.244 -05:00 [INF] Executing endpoint 'Api.Controllers.AuthController.Post (Api)'
+2022-01-22 00:41:38.289 -05:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[System.String]]] Post(Application.Security.User.Request.AuthRequest) on controller Api.Controllers.AuthController (Api).
+2022-01-22 00:41:39.753 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=Library._MigrationHistory 
+2022-01-22 00:41:41.584 -05:00 [INF] Executed DbCommand (188ms) [Parameters=[@__ToLower_0='?' (Size = 4000), @__GetSha256_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleId], [u].[UserId], [u].[CreatedBy], [u].[CreatedOn], [u].[Id], [u].[LastModifiedOn], [u].[Status], [u].[UpdatedBy], [u0].[Id], [u0].[CreatedBy], [u0].[CreatedOn], [u0].[LastModifiedOn], [u0].[pass], [u0].[Status], [u0].[UpdatedBy], [u0].[UserName]
+FROM [Library].[UsersRoles] AS [u]
+INNER JOIN [Library].[User] AS [u0] ON [u].[UserId] = [u0].[Id]
+WHERE (LOWER([u0].[UserName]) = @__ToLower_0) AND ([u0].[pass] = @__GetSha256_1)
+2022-01-22 00:41:41.808 -05:00 [INF] Executed DbCommand (49ms) [Parameters=[@__entity_equality_user_User_0_Id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedBy], [r].[CreatedOn], [r].[Description], [r].[LastModifiedOn], [r].[RoleName], [r].[Status], [r].[UpdatedBy]
+FROM [Library].[Role] AS [r]
+WHERE EXISTS (
+    SELECT 1
+    FROM [Library].[UsersRoles] AS [u]
+    INNER JOIN [Library].[User] AS [u0] ON [u].[UserId] = [u0].[Id]
+    WHERE ([r].[Id] = [u].[RoleId]) AND ([u0].[Id] = @__entity_equality_user_User_0_Id))
+2022-01-22 00:41:41.876 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-01-22 00:41:41.905 -05:00 [INF] Executed action Api.Controllers.AuthController.Post (Api) in 3600.4821ms
+2022-01-22 00:41:41.909 -05:00 [INF] Executed endpoint 'Api.Controllers.AuthController.Post (Api)'
+2022-01-22 00:41:41.916 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Sat, 22 Jan 2022 05:41:40 GMT
+Server: Kestrel
+2022-01-22 00:41:41.939 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Auth application/json 48 - 200 - application/json;+charset=utf-8 4018.3580ms
+2022-01-22 00:41:53.340 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:41:53.342 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:53.356 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:41:53.393 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:41:53.394 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:41:53.395 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 55.3067ms
+2022-01-22 00:41:56.316 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:41:56.318 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:56.321 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:41:56.329 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:41:56.330 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:41:56.331 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 15.2273ms
+2022-01-22 00:41:56.822 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:41:56.823 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:56.826 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:41:56.829 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:41:56.830 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:41:56.831 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 9.3984ms
+2022-01-22 00:41:57.387 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:41:57.388 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:57.391 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:41:57.392 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:41:57.393 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:41:57.395 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 8.1034ms
+2022-01-22 00:41:57.670 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:41:57.672 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:57.674 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:41:57.675 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:41:57.676 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:41:57.678 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 7.4530ms
+2022-01-22 00:41:57.844 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:41:57.846 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:57.847 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:41:57.863 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:41:57.865 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:41:57.866 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 21.5168ms
+2022-01-22 00:41:57.995 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:41:57.996 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:57.998 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:41:58.000 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:41:58.001 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:41:58.003 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 8.0669ms
+2022-01-22 00:41:58.313 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:41:58.314 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:41:58.315 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:41:58.317 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:41:58.318 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:41:58.319 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 6.1863ms
+2022-01-22 00:45:11.032 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 00:45:11.033 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 00:45:11.035 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 00:45:11.037 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 00:45:11.038 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 00:45:11.039 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 6.9584ms

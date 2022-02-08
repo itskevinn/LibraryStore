@@ -1,0 +1,104 @@
+2022-01-16 00:54:35.753 -05:00 [INF] User profile is available. Using 'C:\Users\kevin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-01-16 00:54:35.982 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-16 00:54:35.983 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-16 00:54:35.987 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-16 00:54:35.988 -05:00 [INF] Hosting environment: Development
+2022-01-16 00:54:35.989 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-16 00:54:36.716 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-16 00:54:36.878 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 164.2234ms
+2022-01-16 00:54:37.339 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-16 00:54:37.533 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.9994ms
+2022-01-16 00:54:55.852 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Auth application/json 48
+2022-01-16 00:54:55.898 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 48
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-16 00:54:56.361 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__5(JwtBearerOptions opt) in C:\Users\kevin\RiderProjects\LibraryStore\Api\Program.cs:line 82
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-16 00:54:56.377 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Auth application/json 48 - 500 - text/plain;+charset=utf-8 524.1450ms
+2022-01-16 00:55:04.934 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Auth application/json 48
+2022-01-16 00:55:04.937 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 48
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-16 00:55:04.945 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__5(JwtBearerOptions opt) in C:\Users\kevin\RiderProjects\LibraryStore\Api\Program.cs:line 82
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-16 00:55:04.964 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Auth application/json 48 - 500 - text/plain;+charset=utf-8 30.1797ms

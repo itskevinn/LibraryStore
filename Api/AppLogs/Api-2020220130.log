@@ -1,0 +1,6 @@
+2022-01-30 12:47:31.239 -05:00 [INF] User profile is available. Using 'C:\Users\kevin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-01-30 12:47:31.443 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-30 12:47:31.444 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-30 12:47:31.447 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 12:47:31.448 -05:00 [INF] Hosting environment: Development
+2022-01-30 12:47:31.449 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\

@@ -1,0 +1,88 @@
+2022-01-22 12:55:17.998 -05:00 [INF] User profile is available. Using 'C:\Users\kevin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-01-22 12:55:18.862 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-22 12:55:18.869 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-22 12:55:18.912 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-22 12:55:18.925 -05:00 [INF] Hosting environment: Development
+2022-01-22 12:55:18.933 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-22 12:55:20.048 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-22 12:55:20.331 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 287.3220ms
+2022-01-22 12:55:21.172 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-22 12:55:21.452 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 280.4183ms
+2022-01-22 12:55:54.281 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7150/api/Auth application/json 48
+2022-01-22 12:55:54.326 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Content-Type: application/json
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 48
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 12:55:54.462 -05:00 [INF] Executing endpoint 'Api.Controllers.AuthController.Post (Api)'
+2022-01-22 12:55:54.498 -05:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.Utilities.Response`1[System.String]]] Post(Application.Security.User.Request.AuthRequest) on controller Api.Controllers.AuthController (Api).
+2022-01-22 12:55:56.477 -05:00 [INF] Entity Framework Core 5.0.10 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsHistoryTable=Library._MigrationHistory 
+2022-01-22 12:55:58.305 -05:00 [INF] Executed DbCommand (88ms) [Parameters=[@__ToLower_0='?' (Size = 4000), @__GetSha256_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[RoleId], [u].[UserId], [u].[CreatedBy], [u].[CreatedOn], [u].[Id], [u].[LastModifiedOn], [u].[Status], [u].[UpdatedBy], [u0].[Id], [u0].[CreatedBy], [u0].[CreatedOn], [u0].[LastModifiedOn], [u0].[pass], [u0].[Status], [u0].[UpdatedBy], [u0].[UserName]
+FROM [Library].[UsersRoles] AS [u]
+INNER JOIN [Library].[User] AS [u0] ON [u].[UserId] = [u0].[Id]
+WHERE (LOWER([u0].[UserName]) = @__ToLower_0) AND ([u0].[pass] = @__GetSha256_1)
+2022-01-22 13:03:16.070 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[@__entity_equality_user_User_0_Id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[CreatedBy], [r].[CreatedOn], [r].[Description], [r].[LastModifiedOn], [r].[RoleName], [r].[Status], [r].[UpdatedBy]
+FROM [Library].[Role] AS [r]
+WHERE EXISTS (
+    SELECT 1
+    FROM [Library].[UsersRoles] AS [u]
+    INNER JOIN [Library].[User] AS [u0] ON [u].[UserId] = [u0].[Id]
+    WHERE ([r].[Id] = [u].[RoleId]) AND ([u0].[Id] = @__entity_equality_user_User_0_Id))
+2022-01-22 13:03:41.874 -05:00 [INF] Executing ObjectResult, writing value of type 'Application.Utilities.Response`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-01-22 13:03:41.893 -05:00 [INF] Executed action Api.Controllers.AuthController.Post (Api) in 467387.0112ms
+2022-01-22 13:03:41.895 -05:00 [INF] Executed endpoint 'Api.Controllers.AuthController.Post (Api)'
+2022-01-22 13:03:41.900 -05:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Sat, 22 Jan 2022 18:03:41 GMT
+Server: Kestrel
+2022-01-22 13:03:41.909 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7150/api/Auth application/json 48 - 200 - application/json;+charset=utf-8 467627.9070ms
+2022-01-22 13:04:56.842 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 13:04:56.855 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 13:04:56.865 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 13:04:56.930 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 13:04:56.932 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 13:04:56.933 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 94.1877ms

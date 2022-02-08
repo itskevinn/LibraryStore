@@ -1,0 +1,195 @@
+2022-01-22 13:05:30.544 -05:00 [INF] User profile is available. Using 'C:\Users\kevin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-01-22 13:05:30.964 -05:00 [INF] Now listening on: https://localhost:7150
+2022-01-22 13:05:30.967 -05:00 [INF] Now listening on: http://localhost:5150
+2022-01-22 13:05:30.974 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-22 13:05:30.982 -05:00 [INF] Hosting environment: Development
+2022-01-22 13:05:30.986 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-01-22 13:05:31.570 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-01-22 13:05:31.704 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 135.0758ms
+2022-01-22 13:05:32.018 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-01-22 13:05:32.164 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 146.5344ms
+2022-01-22 13:05:35.576 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 13:05:35.610 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 13:05:35.618 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 13:05:35.890 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-01-22 13:05:36.104 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 13:05:36.106 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 13:05:36.107 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 531.2848ms
+2022-01-22 13:08:42.422 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 13:08:42.428 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 13:08:42.430 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 13:08:42.433 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-01-22 13:08:42.437 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 13:08:42.438 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 13:08:42.441 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 20.4964ms
+2022-01-22 13:08:43.309 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 13:08:43.311 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 13:08:43.313 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 13:08:43.318 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-01-22 13:08:43.322 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 13:08:43.323 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 13:08:43.325 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 15.4134ms
+2022-01-22 13:08:55.632 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 13:08:55.634 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 13:08:55.636 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 13:08:55.639 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-01-22 13:08:55.642 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 13:08:55.644 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 13:08:55.645 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 13.0863ms
+2022-01-22 13:08:56.269 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/api/Book/Get - -
+2022-01-22 13:08:56.271 -05:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Book/Get
+Accept: text/plain
+Host: localhost:7150
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.69
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: [Redacted]
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-01-22 13:08:56.273 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-01-22 13:08:56.275 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-01-22 13:08:56.278 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-01-22 13:08:56.280 -05:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-01-22 13:08:56.281 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/api/Book/Get - - - 401 0 - 11.5096ms

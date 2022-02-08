@@ -1,0 +1,11 @@
+2022-02-08 01:48:58.084 -05:00 [INF] User profile is available. Using 'C:\Users\kevin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-08 01:48:58.288 -05:00 [INF] Now listening on: https://localhost:7150
+2022-02-08 01:48:58.290 -05:00 [INF] Now listening on: http://localhost:5150
+2022-02-08 01:48:58.295 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-08 01:48:58.296 -05:00 [INF] Hosting environment: Development
+2022-02-08 01:48:58.298 -05:00 [INF] Content root path: C:\Users\kevin\RiderProjects\LibraryStore\Api\
+2022-02-08 01:49:00.773 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - -
+2022-02-08 01:49:00.853 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 83.7487ms
+2022-02-08 01:49:01.008 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - -
+2022-02-08 01:49:01.118 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 109.3311ms
+2022-02-08 01:49:44.633 -05:00 [INF] Application is shutting down...

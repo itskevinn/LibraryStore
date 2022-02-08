@@ -16,7 +16,7 @@ namespace Api
         .Build();
 
       var optionsBuilder = new DbContextOptionsBuilder<PersistenceContext>();
-      optionsBuilder.UseSqlServer(config.GetConnectionString("database"),
+      optionsBuilder.UseSqlServer(config.GetConnectionString("local"),
         sqlOpts => { sqlOpts.MigrationsHistoryTable("_MigrationHistory", config.GetValue<string>("SchemaName")); });
 
       return new PersistenceContext(optionsBuilder.Options, config);
